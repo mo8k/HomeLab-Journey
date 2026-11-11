@@ -1,0 +1,36 @@
+MY HOMELAB JOURNEY
+Mohamed Kamate
+
+OPEN THE PAGE
+1. If you downloaded the ZIP, extract the whole ZIP first.
+2. Open index.html in a modern browser such as Chrome, Edge, Firefox, or Safari.
+3. Keep index.html, styles.css, script.js, and the assets folder together.
+No installation, internet connection, or local server is required.
+
+PRESENT AT THE PANEL
+- Click "Present journey" at the top of the page.
+- Move through the overview and seven stages with Previous / Next, arrow keys,
+  or Page Up / Page Down. Home returns to the overview. End shows the last stage.
+- Click Fullscreen if available. Presentation mode also works in a normal window.
+- Press Escape or click Exit presentation to return to the timeline.
+- Presentation begins at the section nearest your current scrolling position.
+- On small screens or short windows, a stage may need vertical scrolling.
+- For projector use, start with browser zoom at 100% and a 16:9 display.
+
+EDIT THE STORY
+- index.html contains the text, stage order, image captions, and image paths.
+- styles.css contains the layout and colors.
+- script.js contains presentation controls and stage navigation.
+- Images in assets are original photos extracted from Mohamed_Kamate_HomeLab.pdf
+  or converted from the supplied IMG_3175.heic. They are not AI-generated.
+
+SOURCE NOTES
+The history comes from Mohamed's supplied homelab PDF and messages.
+The stages describe the progression without assigning unconfirmed dates.
+The expanded-cluster photo shows an earlier expansion, not proof of node count.
+The AI-stage photo is historical and does not identify a specific pictured PC
+as the Lenovo Legion T5. The model's role comes from Mohamed's description.
+Backup and remote TAK details remain high-level. This page does not claim
+verified uptime, restore tests, backup-policy compliance, or an exact topology.
+
+This version is local only. Nothing has been published or connected to GitHub.

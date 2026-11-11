@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b131b">
+  <meta name="description" content="Mohamed Kamate’s homelab journey: learning networking, building a Proxmox cluster, and exploring local AI and self-hosted infrastructure.">
+  <title>My Homelab Journey — Mohamed Kamate</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#journey">Skip to the journey</a>
+  <header class="site-header">
+    <a class="wordmark" href="#overview" aria-label="Mohamed Kamate, back to overview"><span class="monogram" aria-hidden="true">MK<span>.</span></span><span class="wordmark-name">MOHAMED KAMATE</span></a>
+    <div class="header-actions"><span class="header-caption">A PERSONAL LEARNING LAB</span><button class="present-button" id="present" hidden>Present journey <span aria-hidden="true">↗</span></button><button class="exit-button" id="exit" hidden>Exit presentation <span aria-hidden="true">×</span></button></div>
+  </header>
+
+  <main id="journey">
+    <section class="scene overview" id="overview" aria-labelledby="overview-title" data-label="The overview">
+      <div class="hero-heading">
+        <div><p class="eyebrow"><span class="signal" aria-hidden="true"></span> NETWORKING / CYBERSECURITY / SELF-HOSTING</p><h1 id="overview-title">My homelab<br><span>journey.</span></h1></div>
+        <div class="hero-intro"><p>It started with a few virtual machines and a question: <em>how does all of this actually work?</em></p><p class="muted">A look at the systems I built, the problems I ran into, and the lessons that shaped my lab.</p><a class="text-link" href="#stage-1">Explore the progression <span aria-hidden="true">↓</span></a></div>
+      </div>
+      <div class="comparison">
+        <figure class="before-photo"><figcaption><span class="photo-marker">THEN</span> The first dedicated computers</figcaption><div class="photo-mat"><img src="assets/first-computers.jpg" alt="Early homelab with small computers stacked on a windowsill and cables hanging below." width="384" height="512"></div></figure>
+        <figure class="now-photo"><figcaption><span class="photo-marker">NOW</span> My homelab today</figcaption><div class="photo-mat"><img src="assets/current-homelab.jpg" alt="Current homelab with a glass-sided desktop tower above a monitor, managed switch, patch panel, and computers arranged in a small rack." width="3024" height="4032"></div></figure>
+        <p class="comparison-note">Same curiosity.<br>A lot more cable.</p>
+      </div>
+      <div class="overview-footer"><span>BUILT BY MOHAMED KAMATE</span><span>07 STAGES OF LEARNING <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <nav class="stage-nav" aria-label="Journey stages">
+      <a href="#stage-1"><span>01</span> Virtual labs</a><a href="#stage-2"><span>02</span> Dorm network</a><a href="#stage-3"><span>03</span> Dedicated PCs</a><a href="#stage-4"><span>04</span> Cluster</a><a href="#stage-5"><span>05</span> The rack</a><a href="#stage-6"><span>06</span> Local AI</a><a href="#stage-7"><span>07</span> Beyond the rack</a>
+    </nav>
+
+    <section class="scene stage" id="stage-1" aria-labelledby="title-1" data-label="Virtual labs">
+      <div class="stage-copy"><p class="eyebrow">01 / THE STARTING POINT</p><h2 id="title-1">A whole lab.<br>One desktop.</h2><p class="stage-lead">Coursework introduced me to virtualization. VirtualBox gave me a place to put it into practice.</p><p>I ran virtual machines on my personal desktop to explore networking, Windows administration, and cybersecurity testing in my own lab.</p><div class="lesson"><span>THE LESSON</span><p>I could build and experiment with an entire environment before buying dedicated hardware. Sharing resources with my daily desktop soon became a constraint.</p></div></div>
+      <div class="text-visual lab-stack" aria-label="Software in the early virtual lab"><p class="visual-overline">INSIDE VIRTUALBOX</p><div class="software-row"><strong>pfSense</strong><span>Virtual firewall</span></div><div class="software-row"><strong>Kali Linux</strong><span>Security testing</span></div><div class="software-row"><strong>Windows Server</strong><span>Active Directory &amp; GPO</span></div><div class="software-row"><strong>Ubuntu Server</strong><span>Linux services</span></div><div class="software-row"><strong>Metasploit</strong><span>Testing framework</span></div><p class="visual-footnote">An environment to learn by doing.</p></div>
+    </section>
+
+    <section class="scene stage" id="stage-2" aria-labelledby="title-2" data-label="The dorm network">
+      <div class="stage-copy"><p class="eyebrow">02 / MY OWN NETWORK</p><h2 id="title-2">Networking outside<br>the textbook.</h2><p class="stage-lead">A private network in my dorm made addressing and routing something I could work with directly.</p><p>I used a TP-Link router for my internal network and set up wired connections for my PC and PS5. I started experimenting with static IP addresses and routing within that network.</p><div class="lesson"><span>THE LESSON</span><p>A working connection is the beginning. Understanding how devices find one another and how traffic leaves the network takes hands-on practice.</p></div></div>
+      <div class="text-visual network-notes"><p class="visual-overline">THE DORM SETUP</p><p class="large-statement">My room.<br>My internal<br><em>network.</em></p><dl class="simple-facts"><div><dt>Hardware</dt><dd>TP-Link router</dd></div><div><dt>Connections</dt><dd>PC and PS5 over wired LAN</dd></div><div><dt>Exploration</dt><dd>Private addressing and routing</dd></div></dl></div>
+    </section>
+
+    <section class="scene stage" id="stage-3" aria-labelledby="title-3" data-label="Dedicated computers">
+      <div class="stage-copy"><p class="eyebrow">03 / DEDICATED HARDWARE</p><h2 id="title-3">The lab gets<br>its own home.</h2><p class="stage-lead">Running everything on my daily computer meant competing for the same resources.</p><p>I added a Dell OptiPlex and an HP EliteDesk to give the lab dedicated hardware. That let me keep experimenting without tying every lab session to my personal desktop.</p><div class="lesson"><span>THE LESSON</span><p>Repurposed computers can do useful infrastructure work. Dedicated machines also bring new responsibilities for networking and maintenance.</p></div></div>
+      <figure class="stage-photo"><div class="photo-mat"><img src="assets/first-computers.jpg" alt="Two early dedicated lab computers stacked on a windowsill." width="384" height="512"></div><figcaption>The early Dell and HP setup, before the rack.</figcaption></figure>
+    </section>
+
+    <section class="scene stage" id="stage-4" aria-labelledby="title-4" data-label="Cluster and segmentation">
+      <div class="stage-copy"><p class="eyebrow">04 / CLUSTER &amp; SEGMENTATION</p><h2 id="title-4">Separate machines.<br>A connected lab.</h2><p class="stage-lead">The setup expanded into a three-node Proxmox cluster.</p><p>I repurposed a Dell OptiPlex 980 as a physical OPNsense firewall and added a TP-Link managed switch. A dedicated management VLAN used 802.1Q tagging to separate management traffic from lab traffic.</p><div class="lesson"><span>THE LESSON</span><p>Clustering introduced quorum. Segmentation made me think deliberately about which systems should communicate and how I manage them.</p></div></div>
+      <figure class="stage-photo"><div class="photo-mat"><img src="assets/expanded-cluster.jpg" alt="Earlier expanded homelab with several computers, a switch, and connected cables on a windowsill." width="384" height="512"></div><figcaption>An earlier view of the hardware as the lab expanded.</figcaption></figure>
+    </section>
+
+    <section class="scene stage" id="stage-5" aria-labelledby="title-5" data-label="The rack and DNS">
+      <div class="stage-copy"><p class="eyebrow">05 / ORGANIZING THE INFRASTRUCTURE</p><h2 id="title-5">A rack.<br>A little more order.</h2><p class="stage-lead">As the lab grew, the physical layout became part of the project.</p><p>I organized the machines in a rack and routed cabling through a patch panel. A Raspberry Pi 3B on its own VLAN ran AdGuard for DNS filtering and Unbound for recursive DNS resolution.</p><div class="lesson"><span>THE LESSON</span><p>Running services means understanding their dependencies. DNS and physical cabling deserve as much attention as the virtual machines.</p></div></div>
+      <figure class="stage-photo"><div class="photo-mat"><svg class="rack-image" viewBox="0 0 862 920" role="img" aria-labelledby="rack-image-title"><title id="rack-image-title">Small equipment rack with a network switch, patch panel, blue patch cables, and lab computers.</title><image href="assets/first-rack.jpg" width="920" height="862" transform="translate(862 0) rotate(90)" /></svg></div><figcaption>The rack brought the network and compute hardware together.</figcaption></figure>
+    </section>
+
+    <section class="scene stage" id="stage-6" aria-labelledby="title-6" data-label="Local AI and RAG">
+      <div class="stage-copy"><p class="eyebrow">06 / LOCAL AI</p><h2 id="title-6">A place for<br>my second brain.</h2><p class="stage-lead">The lab became a place to experiment with AI on my own hardware.</p><p>I run local models on a Lenovo Legion T5. I also built a retrieval-augmented generation (RAG) pipeline to search my notes, ideas, and project material and bring relevant information into model responses.</p><div class="lesson"><span>THE LESSON</span><p>The model is one part of the system. Organizing the source material and retrieving useful context are part of making it useful.</p></div></div>
+      <figure class="stage-photo"><div class="photo-mat"><img src="assets/local-ai.jpg" alt="Earlier lab photo showing a desktop tower above the network rack." width="799" height="1210"></div><figcaption>An earlier photo from the local AI stage of the lab.</figcaption></figure>
+    </section>
+
+    <section class="scene stage" id="stage-7" aria-labelledby="title-7" data-label="Backups and remote infrastructure">
+      <div class="stage-copy"><p class="eyebrow">07 / BEYOND THE RACK</p><h2 id="title-7">More services.<br>More responsibility.</h2><p class="stage-lead">The lab now supports storage, media, backups, and infrastructure at another location.</p><p>An HP desktop serves as my backup server. I also use a server at another location to route TAK traffic and participate in my backup setup.</p><div class="lesson"><span>THE LESSON</span><p>Keeping useful data and supporting remote services makes recovery planning and documentation part of the work.</p></div></div>
+      <div class="text-visual beyond-notes"><p class="visual-overline">WHAT THE LAB SUPPORTS</p><div class="capability"><span>01</span><div><h3>Self-hosted services</h3><p>Local cloud storage and a media server.</p></div></div><div class="capability"><span>02</span><div><h3>Local backups</h3><p>An HP desktop with a dedicated backup role.</p></div></div><div class="capability"><span>03</span><div><h3>Another location</h3><p>Remote infrastructure for TAK traffic and backups.</p></div></div><p class="closing-line">The next part of the journey:<br><em>documenting what I build.</em></p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><span class="monogram" aria-hidden="true">MK<span>.</span></span><p>Built to understand.<br><span class="muted">Still learning. Still building.</span></p></div><a class="text-link" href="#overview">Back to the beginning <span aria-hidden="true">↑</span></a></footer>
+
+  <div class="presentation-controls" id="presentation-controls" role="region" aria-label="Presentation controls" hidden>
+    <div class="presentation-position"><span class="present-label" id="present-label">The overview</span><span class="counter" id="counter" aria-live="polite" aria-atomic="true">01 / 08</span></div>
+    <div class="presentation-buttons"><button id="fullscreen" hidden>Fullscreen <span aria-hidden="true">⤢</span></button><button id="previous" aria-label="Previous stage"><span aria-hidden="true">←</span><span class="button-word"> Previous</span></button><button id="next" aria-label="Next stage"><span class="button-word">Next </span><span aria-hidden="true">→</span></button></div>
+    <div class="progress-track" aria-hidden="true"><span id="progress"></span></div>
+  </div>
+  <p class="sr-only" id="presentation-status" role="status"></p>
+</body>
+</html>
