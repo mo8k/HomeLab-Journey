@@ -39,6 +39,9 @@ NETWORK DIAGRAM
 - Click the diagram or Open full-size diagram to see it in a new tab.
 - Expand Read the network inventory for an accessible text version.
 - The diagram includes the off-site VPS configured as the WireGuard hub.
-- Only the six confirmed guests are placed behind the internal pfSense firewall.
+- The isolated guest subnet sits behind the physical firewall and is separate
+  from the lab VM network.
+- The six confirmed lab VMs sit behind virtual pfSense on pvenet. Their
+  Proxmox hosts remain on the INT node network.
 
 This version is local only. Nothing has been published or connected to GitHub.

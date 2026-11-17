@@ -73,27 +73,27 @@
     <section class="scene network-scene" id="network" aria-labelledby="network-title" data-label="Current network and WireGuard hub">
       <div class="network-heading">
         <div><p class="eyebrow">08 / CURRENT ARCHITECTURE</p><h2 id="network-title">The lab, connected.</h2></div>
-        <p>Four nodes on INT. Six guests behind pfSense.<br>An off-site VPS serving as my WireGuard hub.</p>
+        <p>An isolated guest subnet behind the physical firewall.<br>Lab VMs behind virtual pfSense. An off-site WireGuard hub.</p>
       </div>
       <figure class="network-figure">
         <a class="network-image-link" href="assets/homelab-network.png" target="_blank" rel="noopener" aria-label="Open the full-size homelab network diagram in a new tab">
-          <img src="assets/homelab-network.png" alt="Logical homelab network with four Proxmox hosts on INT, six guest machines behind internal pfSense, and a separate off-site VPS configured as a WireGuard hub for TAK traffic. Detailed inventory follows below." width="3840" height="2160">
+          <img src="assets/homelab-network.png" alt="Logical homelab network: the physical firewall serves a separate isolated guest subnet and the local network. Four Proxmox hosts use INT. Six lab VMs sit behind the virtual pfSense internal firewall on pvenet. A separate off-site VPS is the WireGuard hub for TAK traffic. Detailed inventory follows below." width="1672" height="941">
         </a>
-        <figcaption><span><span class="network-key" aria-hidden="true"></span> Local infrastructure and off-site connectivity</span><a class="text-link" href="assets/homelab-network.png" target="_blank" rel="noopener">Open full-size diagram <span aria-hidden="true">↗</span><span class="sr-only"> in a new tab</span></a></figcaption>
+        <figcaption><span><span class="network-key" aria-hidden="true"></span> Separate guest subnet and internal lab network</span><a class="text-link" href="assets/homelab-network.png" target="_blank" rel="noopener">Open full-size diagram <span aria-hidden="true">↗</span><span class="sr-only"> in a new tab</span></a></figcaption>
       </figure>
       <details class="network-inventory">
         <summary>Read the network inventory</summary>
         <div class="inventory-content">
-          <p class="inventory-intro">INT carries the Proxmox node network. Hosting a guest on one of these nodes does not establish that guest’s VLAN assignment.</p>
+          <p class="inventory-intro">The isolated guest subnet sits behind the physical firewall and is separate from the lab VM network. Ubuntu 01, Ubuntu 02, Kali, Local, Metasploitable, and Wazuh sit behind the virtual pfSense internal firewall hosted on pvenet. INT carries the Proxmox node network; a VM’s host does not establish its VLAN assignment.</p>
           <div class="inventory-columns">
-            <div><h3>pvenet</h3><ul><li>pfSense: internal firewall</li><li>Homeboard: VM</li><li>Qdrant: LXC for local models</li><li>Tailscale: LXC</li><li>MikroTik</li></ul></div>
-            <div><h3>pve-computer</h3><ul><li>Grafana: LXC</li><li>Metasploitable: behind pfSense</li><li>TAK Server: VM</li></ul></div>
-            <div><h3>power</h3><ul><li>NAS: VM</li><li>Wazuh: VM, behind pfSense</li><li>Windows: VM</li></ul></div>
-            <div><h3>pve</h3><ul><li>Ubuntu 01: behind pfSense</li><li>Kali: behind pfSense</li><li>Local: Ubuntu, behind pfSense</li><li>AUD: VM</li><li>Ubuntu 02: behind pfSense</li></ul></div>
+            <div><h3>pvenet</h3><ul><li>pfSense: virtual internal firewall</li><li>Homeboard: VM</li><li>Qdrant: LXC for local models</li><li>Tailscale: LXC</li><li>MikroTik</li></ul></div>
+            <div><h3>pve-computer</h3><ul><li>Grafana: LXC</li><li>Metasploitable: behind virtual pfSense</li><li>TAK Server: VM</li></ul></div>
+            <div><h3>power</h3><ul><li>NAS: VM</li><li>Wazuh: VM, behind virtual pfSense</li><li>Windows: VM</li></ul></div>
+            <div><h3>pve</h3><ul><li>Ubuntu 01: behind virtual pfSense</li><li>Kali: behind virtual pfSense</li><li>Local: Ubuntu, behind virtual pfSense</li><li>AUD: VM</li><li>Ubuntu 02: behind virtual pfSense</li></ul></div>
           </div>
           <div class="remote-inventory"><h3>Off-site VPS</h3><p>Configured as the WireGuard hub. The off-site server also supports TAK traffic routing and participates in the backup setup. The lab-side WireGuard peer and exact traffic paths remain to be mapped.</p></div>
           <p><strong>Network names:</strong> AI, DNS, INT, LAN, WAN, PBS, ROUT, TAK, VPN, VPS. The network named VPS and the off-site VPS server are shown separately.</p>
-          <p class="inventory-note">Logical inventory based on the described setup. WAN’s role, other guest VLAN assignments, specific NAS applications, and the meaning of AUD remain unconfirmed. No IP addresses or unconfirmed routing paths are shown.</p>
+          <p class="inventory-note">Logical inventory based on the described setup. WAN’s role, other VM network assignments, specific NAS applications, and the meaning of AUD remain unconfirmed. No IP addresses or unconfirmed routing paths are shown.</p>
         </div>
       </details>
     </section>
