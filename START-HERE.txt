@@ -9,7 +9,7 @@ No installation, internet connection, or local server is required.
 
 PRESENT AT THE PANEL
 - Click "Present journey" at the top of the page.
-- Move through the overview and seven stages with Previous / Next, arrow keys,
+- Move through the overview, seven stages, and network diagram with Previous / Next, arrow keys,
   or Page Up / Page Down. Home returns to the overview. End shows the last stage.
 - Click Fullscreen if available. Presentation mode also works in a normal window.
 - Press Escape or click Exit presentation to return to the timeline.
@@ -21,8 +21,9 @@ EDIT THE STORY
 - index.html contains the text, stage order, image captions, and image paths.
 - styles.css contains the layout and colors.
 - script.js contains presentation controls and stage navigation.
-- Images in assets are original photos extracted from Mohamed_Kamate_HomeLab.pdf
-  or converted from the supplied IMG_3175.heic. They are not AI-generated.
+- Photos in assets are original images extracted from Mohamed_Kamate_HomeLab.pdf
+  or converted from IMG_3175.heic. The separate network diagram is an
+  AI-generated logical illustration based on Mohamed’s supplied inventory.
 
 SOURCE NOTES
 The history comes from Mohamed's supplied homelab PDF and messages.
@@ -32,5 +33,12 @@ The AI-stage photo is historical and does not identify a specific pictured PC
 as the Lenovo Legion T5. The model's role comes from Mohamed's description.
 Backup and remote TAK details remain high-level. This page does not claim
 verified uptime, restore tests, backup-policy compliance, or an exact topology.
+
+NETWORK DIAGRAM
+- Choose Network in the stage navigation, or End while presenting.
+- Click the diagram or Open full-size diagram to see it in a new tab.
+- Expand Read the network inventory for an accessible text version.
+- The diagram includes the off-site VPS configured as the WireGuard hub.
+- Only the six confirmed guests are placed behind the internal pfSense firewall.
 
 This version is local only. Nothing has been published or connected to GitHub.
